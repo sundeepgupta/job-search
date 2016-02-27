@@ -13,7 +13,35 @@
 		AE321E2D1C82472A000D0BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE321E2B1C82472A000D0BAF /* Main.storyboard */; };
 		AE321E2F1C82472A000D0BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE321E2E1C82472A000D0BAF /* Assets.xcassets */; };
 		AE321E321C82472A000D0BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE321E301C82472A000D0BAF /* LaunchScreen.storyboard */; };
+		AEF4A0641C82488D005526DF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF4A0631C82488D005526DF /* ShareViewController.swift */; };
+		AEF4A0671C82488D005526DF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF4A0651C82488D005526DF /* MainInterface.storyboard */; };
+		AEF4A06B1C82488D005526DF /* job-saver.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AEF4A0611C82488D005526DF /* job-saver.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AEFCCD521C824A3500560F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE321E2E1C82472A000D0BAF /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEF4A0691C82488D005526DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE321E1A1C82472A000D0BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEF4A0601C82488D005526DF;
+			remoteInfo = "job-saver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AEF4A06F1C82488D005526DF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AEF4A06B1C82488D005526DF /* job-saver.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE321E221C82472A000D0BAF /* job-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "job-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +52,21 @@
 		AE321E2E1C82472A000D0BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE321E311C82472A000D0BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE321E331C82472A000D0BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF4A0611C82488D005526DF /* job-saver.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "job-saver.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF4A0631C82488D005526DF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		AEF4A0661C82488D005526DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		AEF4A0681C82488D005526DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE321E1F1C82472A000D0BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF4A05E1C82488D005526DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				AE321E241C82472A000D0BAF /* job-search */,
+				AEF4A0621C82488D005526DF /* job-saver */,
 				AE321E231C82472A000D0BAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				AE321E221C82472A000D0BAF /* job-search.app */,
+				AEF4A0611C82488D005526DF /* job-saver.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +108,16 @@
 			path = "job-search";
 			sourceTree = "<group>";
 		};
+		AEF4A0621C82488D005526DF /* job-saver */ = {
+			isa = PBXGroup;
+			children = (
+				AEF4A0631C82488D005526DF /* ShareViewController.swift */,
+				AEF4A0651C82488D005526DF /* MainInterface.storyboard */,
+				AEF4A0681C82488D005526DF /* Info.plist */,
+			);
+			path = "job-saver";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +128,34 @@
 				AE321E1E1C82472A000D0BAF /* Sources */,
 				AE321E1F1C82472A000D0BAF /* Frameworks */,
 				AE321E201C82472A000D0BAF /* Resources */,
+				AEF4A06F1C82488D005526DF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AEF4A06A1C82488D005526DF /* PBXTargetDependency */,
 			);
 			name = "job-search";
 			productName = "job-search";
 			productReference = AE321E221C82472A000D0BAF /* job-search.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AEF4A0601C82488D005526DF /* job-saver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF4A06E1C82488D005526DF /* Build configuration list for PBXNativeTarget "job-saver" */;
+			buildPhases = (
+				AEF4A05D1C82488D005526DF /* Sources */,
+				AEF4A05E1C82488D005526DF /* Frameworks */,
+				AEF4A05F1C82488D005526DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "job-saver";
+			productName = "job-saver";
+			productReference = AEF4A0611C82488D005526DF /* job-saver.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +168,9 @@
 				ORGANIZATIONNAME = sundeep;
 				TargetAttributes = {
 					AE321E211C82472A000D0BAF = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					AEF4A0601C82488D005526DF = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -116,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				AE321E211C82472A000D0BAF /* job-search */,
+				AEF4A0601C82488D005526DF /* job-saver */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +202,15 @@
 				AE321E321C82472A000D0BAF /* LaunchScreen.storyboard in Resources */,
 				AE321E2F1C82472A000D0BAF /* Assets.xcassets in Resources */,
 				AE321E2D1C82472A000D0BAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF4A05F1C82488D005526DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFCCD521C824A3500560F4A /* Assets.xcassets in Resources */,
+				AEF4A0671C82488D005526DF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +227,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEF4A05D1C82488D005526DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF4A0641C82488D005526DF /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEF4A06A1C82488D005526DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEF4A0601C82488D005526DF /* job-saver */;
+			targetProxy = AEF4A0691C82488D005526DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE321E2B1C82472A000D0BAF /* Main.storyboard */ = {
@@ -161,6 +260,14 @@
 				AE321E311C82472A000D0BAF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AEF4A0651C82488D005526DF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEF4A0661C82488D005526DF /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -251,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "job-search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search";
@@ -262,10 +370,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "job-search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AEF4A06C1C82488D005526DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "job-saver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search.job-saver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AEF4A06D1C82488D005526DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "job-saver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search.job-saver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -288,6 +421,16 @@
 				AE321E381C82472A000D0BAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF4A06E1C82488D005526DF /* Build configuration list for PBXNativeTarget "job-saver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF4A06C1C82488D005526DF /* Debug */,
+				AEF4A06D1C82488D005526DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
