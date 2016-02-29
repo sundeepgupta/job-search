@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AE321E261C82472A000D0BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE321E251C82472A000D0BAF /* AppDelegate.swift */; };
-		AE321E281C82472A000D0BAF /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE321E271C82472A000D0BAF /* MasterViewController.swift */; };
-		AE321E2A1C82472A000D0BAF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE321E291C82472A000D0BAF /* DetailViewController.swift */; };
 		AE321E2D1C82472A000D0BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE321E2B1C82472A000D0BAF /* Main.storyboard */; };
 		AE321E2F1C82472A000D0BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE321E2E1C82472A000D0BAF /* Assets.xcassets */; };
 		AE321E321C82472A000D0BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE321E301C82472A000D0BAF /* LaunchScreen.storyboard */; };
+		AE7FB28B1C83CA1B00399293 /* JobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB28A1C83CA1B00399293 /* JobsVC.swift */; };
 		AEF4A0641C82488D005526DF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF4A0631C82488D005526DF /* ShareViewController.swift */; };
 		AEF4A0671C82488D005526DF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF4A0651C82488D005526DF /* MainInterface.storyboard */; };
 		AEF4A06B1C82488D005526DF /* job-saver.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AEF4A0611C82488D005526DF /* job-saver.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -46,12 +45,13 @@
 /* Begin PBXFileReference section */
 		AE321E221C82472A000D0BAF /* job-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "job-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE321E251C82472A000D0BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE321E271C82472A000D0BAF /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		AE321E291C82472A000D0BAF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AE321E2C1C82472A000D0BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE321E2E1C82472A000D0BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE321E311C82472A000D0BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE321E331C82472A000D0BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7FB28A1C83CA1B00399293 /* JobsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsVC.swift; sourceTree = "<group>"; };
+		AE7FB28E1C83D12400399293 /* job-search.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "job-search.entitlements"; sourceTree = "<group>"; };
+		AE7FB28F1C83D18F00399293 /* job-saver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "job-saver.entitlements"; sourceTree = "<group>"; };
 		AEF4A0611C82488D005526DF /* job-saver.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "job-saver.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF4A0631C82488D005526DF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		AEF4A0661C82488D005526DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -97,13 +97,13 @@
 		AE321E241C82472A000D0BAF /* job-search */ = {
 			isa = PBXGroup;
 			children = (
+				AE7FB28E1C83D12400399293 /* job-search.entitlements */,
 				AE321E251C82472A000D0BAF /* AppDelegate.swift */,
-				AE321E271C82472A000D0BAF /* MasterViewController.swift */,
-				AE321E291C82472A000D0BAF /* DetailViewController.swift */,
 				AE321E2B1C82472A000D0BAF /* Main.storyboard */,
 				AE321E2E1C82472A000D0BAF /* Assets.xcassets */,
 				AE321E301C82472A000D0BAF /* LaunchScreen.storyboard */,
 				AE321E331C82472A000D0BAF /* Info.plist */,
+				AE7FB28A1C83CA1B00399293 /* JobsVC.swift */,
 			);
 			path = "job-search";
 			sourceTree = "<group>";
@@ -111,6 +111,7 @@
 		AEF4A0621C82488D005526DF /* job-saver */ = {
 			isa = PBXGroup;
 			children = (
+				AE7FB28F1C83D18F00399293 /* job-saver.entitlements */,
 				AEF4A0631C82488D005526DF /* ShareViewController.swift */,
 				AEF4A0651C82488D005526DF /* MainInterface.storyboard */,
 				AEF4A0681C82488D005526DF /* Info.plist */,
@@ -169,9 +170,21 @@
 				TargetAttributes = {
 					AE321E211C82472A000D0BAF = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = M3NJ52HVCE;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AEF4A0601C82488D005526DF = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = M3NJ52HVCE;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -221,8 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE321E2A1C82472A000D0BAF /* DetailViewController.swift in Sources */,
-				AE321E281C82472A000D0BAF /* MasterViewController.swift in Sources */,
+				AE7FB28B1C83CA1B00399293 /* JobsVC.swift in Sources */,
 				AE321E261C82472A000D0BAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,11 +370,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "job-search/job-search.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "job-search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -370,11 +386,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "job-search/job-search.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "job-search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -382,10 +402,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "job-saver/job-saver.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "job-saver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search.job-saver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -394,10 +418,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "job-saver/job-saver.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "job-saver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sundeepgupta.job-search.job-saver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
