@@ -1,23 +1,37 @@
 import UIKit
 import Social
+import CoreMedia
 
-class ShareViewController: UIViewController {
+class ShareViewController: SLComposeServiceViewController {
+    override func didSelectPost() {
+        guard let item = self.extensionContext?.inputItems.first as? NSExtensionItem else {
+            fatalError("error fetching the input item")
+        }
 
-//    override func isContentValid() -> Bool {
-//        // Do validation of contentText and/or NSExtensionContext attachments here
-//        return true
-//    }
-//
-//    override func didSelectPost() {
-//        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-//    
-//        // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-//        self.extensionContext!.completeRequestReturningItems([], completionHandler: nil)
-//    }
-//
-//    override func configurationItems() -> [AnyObject]! {
-//        // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
-//        return []
-//    }
-
+        guard let itemProvider = item.attachments?.first as? NSItemProvider else {
+            fatalError("error fetching the item provider")
+        }
+        
+        if itemProvider.hasItemConformingToTypeIdentifier("public.url") {
+            itemProvider.loadItemForTypeIdentifier("public.url", options: nil, completionHandler: { item, error in
+                guard let item = item as? NSURL else {
+                    fatalError("the item was not a url")
+                }
+                
+                let sharedDefaults = NSUserDefaults(suiteName: "group.ca.sundeepgupta.job")
+                
+                if var jobs = sharedDefaults?.stringArrayForKey("jobs") {
+                    let url = item.absoluteString
+                    jobs.append(url)
+                    sharedDefaults?.setObject(jobs, forKey: "jobs")
+                } else {
+                    sharedDefaults?.setObject([], forKey: "jobs")
+                }
+                
+                sharedDefaults?.synchronize()
+            })
+        }
+        
+        self.extensionContext!.completeRequestReturningItems([], completionHandler: nil)
+    }
 }

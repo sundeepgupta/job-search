@@ -6,10 +6,7 @@ class JobsVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sharedDefaults = NSUserDefaults(suiteName: "group.ca.sundeepgupta.job")
-        if let jobs = sharedDefaults?.stringArrayForKey("jobs") {
-            self.jobs = jobs
-        }
+        self.loadJobs()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,5 +20,20 @@ class JobsVC: UITableViewController {
         cell.textLabel?.text = job
         
         return cell
+    }
+    
+    @IBAction func refresh() {
+        self.loadJobs()
+    }
+    
+    func loadJobs() {
+        let sharedDefaults = NSUserDefaults(suiteName: "group.ca.sundeepgupta.job")
+        if let jobs = sharedDefaults?.stringArrayForKey("jobs") {
+            self.jobs = jobs
+        } else {
+            sharedDefaults?.setObject([], forKey: "jobs")
+        }
+        
+        self.tableView.reloadData()
     }
 }

@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="jobCell" id="XbF-ek-OEN" customClass="JobCell" customModule="job_search" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="jobCell" id="XbF-ek-OEN">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XbF-ek-OEN" id="TMR-42-Vk1">
@@ -28,7 +28,13 @@
                             <outlet property="delegate" destination="QmE-iv-bbj" id="01q-R2-97l"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gQ1-ID-Jgq"/>
+                    <navigationItem key="navigationItem" id="gQ1-ID-Jgq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Vip-bK-h6p">
+                            <connections>
+                                <action selector="refresh" destination="QmE-iv-bbj" id="OG9-BJ-qCm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikc-1r-BOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
