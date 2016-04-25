@@ -12,6 +12,7 @@
 		AE321E2F1C82472A000D0BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE321E2E1C82472A000D0BAF /* Assets.xcassets */; };
 		AE321E321C82472A000D0BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE321E301C82472A000D0BAF /* LaunchScreen.storyboard */; };
 		AE7FB28B1C83CA1B00399293 /* JobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB28A1C83CA1B00399293 /* JobsVC.swift */; };
+		AEE588461CCDA33D00CA96B4 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE588451CCDA33D00CA96B4 /* JobCell.swift */; };
 		AEF4A0641C82488D005526DF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF4A0631C82488D005526DF /* ShareViewController.swift */; };
 		AEF4A0671C82488D005526DF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF4A0651C82488D005526DF /* MainInterface.storyboard */; };
 		AEF4A06B1C82488D005526DF /* job-saver.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AEF4A0611C82488D005526DF /* job-saver.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -52,6 +53,7 @@
 		AE7FB28A1C83CA1B00399293 /* JobsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsVC.swift; sourceTree = "<group>"; };
 		AE7FB28E1C83D12400399293 /* job-search.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "job-search.entitlements"; sourceTree = "<group>"; };
 		AE7FB28F1C83D18F00399293 /* job-saver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "job-saver.entitlements"; sourceTree = "<group>"; };
+		AEE588451CCDA33D00CA96B4 /* JobCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		AEF4A0611C82488D005526DF /* job-saver.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "job-saver.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF4A0631C82488D005526DF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		AEF4A0661C82488D005526DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				AE321E301C82472A000D0BAF /* LaunchScreen.storyboard */,
 				AE321E331C82472A000D0BAF /* Info.plist */,
 				AE7FB28A1C83CA1B00399293 /* JobsVC.swift */,
+				AEE588451CCDA33D00CA96B4 /* JobCell.swift */,
 			);
 			path = "job-search";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE7FB28B1C83CA1B00399293 /* JobsVC.swift in Sources */,
+				AEE588461CCDA33D00CA96B4 /* JobCell.swift in Sources */,
 				AE321E261C82472A000D0BAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

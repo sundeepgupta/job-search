@@ -1,7 +1,7 @@
 import UIKit
 
 class JobsVC: UITableViewController {
-    var jobs = [String]()
+    var jobs = [[String: String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,10 +14,12 @@ class JobsVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("jobCell", forIndexPath: indexPath) as! JobCell
+        
         let job = self.jobs[indexPath.row]
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("jobCell", forIndexPath: indexPath)
-        cell.textLabel?.text = job
+        cell.urlLabel.text = job["url"]
+        cell.noteLabel.text = job["note"]
         
         return cell
     }
@@ -27,11 +29,16 @@ class JobsVC: UITableViewController {
     }
     
     func loadJobs() {
-        let sharedDefaults = NSUserDefaults(suiteName: "group.ca.sundeepgupta.job")
-        if let jobs = sharedDefaults?.stringArrayForKey("jobs") {
+        // Get a reference to our shared user defaults.
+        guard let sharedDefaults = NSUserDefaults(suiteName: "group.ca.sundeepgupta.job-search") else {
+            fatalError()
+        }
+        
+        // Extract our jobs array from the defaults.
+        // NSUserDefaults doesn't store the type information for our jobs array,
+        // so we must cast it to the correct type.
+        if let jobs = sharedDefaults.arrayForKey("jobs") as? [[String: String]] {
             self.jobs = jobs
-        } else {
-            sharedDefaults?.setObject([], forKey: "jobs")
         }
         
         self.tableView.reloadData()
